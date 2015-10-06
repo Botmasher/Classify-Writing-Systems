@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*
-import re
 
 # def clean_string(string):
 # 	'''
@@ -13,11 +12,20 @@ import re
 # 			s+=i
 # 	return s
 
+# def ratio_distinct(text):
+# 	'''
+# 	Ratio of unique characters to total number of characters in the text.
+#	@param text			:	any sample string
+#	-> ratio 			:	ratio of unique symbols to total symbols in sample
+# 	'''
+#	ratio = count_distinct(text)/len(text)
+# 	return ratio
+
 def count_distinct(string):
 	'''
 	Count the number of unique symbols in this string.
-	@param	string 	:	any string
-	-> counter		:	distinct glyph count
+	@param	string 		:	any string
+	-> counter			:	distinct glyph count
 	'''
 	# set codec
 	string = string.decode('utf-8')
@@ -46,11 +54,12 @@ def classify_script(symbols, script='This script', double_bit=False):
 		script_type = "%s is logophonetic!"%script
 	return script_type
 
-#script_name = 'English'
-#script_signs = 'abcdefghijklmnopqrstuvwxyz'
+script_name = 'English'
+script_signs = 'abcdefghijklmnopqrstuvwxyz'
+script_signs = 'I am typing this little piece of text in English. Hopefully it is good enough to give that little function an idea of how this writing system works. It should tell us that it\'s written in an alphabet.'
 
-#script_name = 'Hawaiian'
-#script_signs = 'aeiouhklmnpw\''
+script_name = 'Hawaiian'
+script_signs = 'Haʻaheo ka ua i nā pali, ke nihi aʻela i ka nahele, e hahai ana paha i ka liko, pua ʻāhihi lehua o uka. Aloha ʻoe, aloha ʻoe, e ke onaona noho i ka lipo'
 
 #script_name = 'Hiragana'
 #script_signs = 'あいうえおかきくけこさしすせそたちつてとはひふへほまみむめもなにぬねのらりるれろわをやゆよん'
